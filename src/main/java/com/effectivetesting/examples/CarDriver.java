@@ -11,6 +11,11 @@ public class CarDriver {
 				System.out.println("Tire pressure level: normal");
 			}
 		}
+		
+		for(int i = 1; i <= myCar.doors; i++) {
+			System.out.println("Checking door : " + i);
+		}
+						
 
 	}
 }
