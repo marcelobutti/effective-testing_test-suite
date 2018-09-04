@@ -19,5 +19,10 @@ public class CarDriver {
 			myCar.fuelLevel -= 0.5f;
 		}
 
+		while(myCar.oillevel > 0) {
+			System.out.println("Engine working. Oil level: " + Float.toString(myCar.oillevel));
+			myCar.oillevel -= 0.5f;
+		}
+		
 	}
 }

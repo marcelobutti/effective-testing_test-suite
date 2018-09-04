@@ -6,4 +6,5 @@ public class Car {
 	public boolean isDiesel = false;
 	public TireSensor tireSensor = new TireSensor();
 	public float fuelLevel;
+	public float oillevel=3;
 }
