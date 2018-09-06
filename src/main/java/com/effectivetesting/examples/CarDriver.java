@@ -8,5 +8,6 @@ public class CarDriver {
 		
 		myCar.goForward();
 		myCar.accelerate(2300);
+		System.out.println("Tire sensor meassurement: " + myCar.getTireSensorCriteria());
 	}
 }

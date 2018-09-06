@@ -3,6 +3,7 @@ package com.effectivetesting.examples;
 public class Car extends MotorVehicle {
 	private Transmission transmission;
 	private String message = "Current Gear: ";
+	private TireSensor tireSensor = new TireSensor();
 	
 	public Car() {
 		transmission = new AutomaticTransmission();
@@ -11,6 +12,9 @@ public class Car extends MotorVehicle {
 		return "sedan";
 	}
     
+	public String getTireSensorCriteria() {
+		return tireSensor.getMeassurementUnit();
+	}
 	public void goForward() {
 		transmission.setMode("DRIVE");
 		System.out.println("Going forward. " + message + transmission.showCurrentGear());
