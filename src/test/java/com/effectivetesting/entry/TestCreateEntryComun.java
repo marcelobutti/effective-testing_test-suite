@@ -12,7 +12,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class TestCreateEntry {
+public class TestCreateEntryComun {
 	private WebDriver driver;
 	
 
@@ -23,10 +23,10 @@ public class TestCreateEntry {
 		driver.findElement(By.id("password")).sendKeys("admin1");
 		driver.findElement(By.id("btn-submit")).click();
 		
-		Random random=new Random();
+		//Random random=new Random();
 		
 		driver.findElement(By.id("create_post")).click();
-		driver.findElement(By.id("title")).sendKeys("My newest post " + random);
+		driver.findElement(By.id("title")).sendKeys("My newest post ");
 		driver.findElement(By.id("body")).sendKeys("This is a post.");
 		driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/form/div[5]/div/button")).click();
 		
