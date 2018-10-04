@@ -14,9 +14,9 @@ public class TestEntry {
     		.contentType("application/json")
     	
 	    .when()
-			.get(DEFAULT_BASE_URL + "/entry/2")
+			.get(DEFAULT_BASE_URL + "/entry/3")
 	    	
 		.then()
-			.body("title", equalTo("second entry"));
+			.body("title", equalTo("entry mb 2"));
 	}
 }

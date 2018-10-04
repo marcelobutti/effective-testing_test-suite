@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import com.effectivetesting.entities.User;
 
-public class TestCreateUser {
+public class TestDeleteUser {
 	private static final String DEFAULT_BASE_URL = "http://localhost:5000/api";
 	private static final String ID = "99";
 	
@@ -20,7 +20,7 @@ public class TestCreateUser {
         	.body(user)
         	
         .when()
-        	.delete(DEFAULT_BASE_URL + "/user/" + ID)
+    		.post(DEFAULT_BASE_URL + "/user")
         	        	
     	.then()
     		.statusCode(201);
@@ -28,7 +28,7 @@ public class TestCreateUser {
 
     @After
     public void tearDown() {
-        //delete(DEFAULT_BASE_URL + "/user/" + ID);
+        delete(DEFAULT_BASE_URL + "/user/" + ID);
     }
 	
 	private User createTestUser() {
