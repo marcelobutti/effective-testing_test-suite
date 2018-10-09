@@ -9,7 +9,8 @@ import com.effectivetesting.entities.User;
 
 public class TestDeleteUser {
 	private static final String DEFAULT_BASE_URL = "http://localhost:5000/api";
-	private static final String ID = "99";
+	private static final String ID = "101";
+	
 	
 	@Test
 	public void postUser() {
@@ -20,10 +21,8 @@ public class TestDeleteUser {
         	.body(user)
         	
         .when()
-    		.post(DEFAULT_BASE_URL + "/user")
+    		.delete(DEFAULT_BASE_URL + "/user/" + ID);
         	        	
-    	.then()
-    		.statusCode(201);
 	}
 
     @After

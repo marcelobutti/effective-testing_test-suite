@@ -9,7 +9,7 @@ import com.effectivetesting.entities.User;
 
 public class TestCreateUser {
 	private static final String DEFAULT_BASE_URL = "http://localhost:5000/api";
-	private static final String ID = "99";
+	private static final String ID = "103";
 	
 	@Test
 	public void postUser() {
@@ -20,7 +20,7 @@ public class TestCreateUser {
         	.body(user)
         	
         .when()
-        	.delete(DEFAULT_BASE_URL + "/user/" + ID)
+        	.post(DEFAULT_BASE_URL + "/user")
         	        	
     	.then()
     		.statusCode(201);
@@ -36,9 +36,9 @@ public class TestCreateUser {
 		User user = new User();
 
 		user.setId(ID);
-		user.setEmail("userx@gmail.com");
-		user.setpassword_hash("userx");
-		user.setName("John Doe 99");
+		user.setEmail("userx"+ ID +"@gmail.com");
+		user.setpassword_hash("userx"+ ID);
+		user.setName("John Doe"+ ID);
 		
 		return user;
 
